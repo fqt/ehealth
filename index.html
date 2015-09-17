@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="TestApp">
+
+  <head>
+    <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="pouchdb.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
+  </head>
+  <body ng-controller="MyCtrl">
+    
+    <p>Keep track of your players! How many goals did they score?</p>
+  
+    <div>
+      John
+      <button ng-click="incScore('1')">Increase Score</button>
+      <span class="score">{{score['1']}}</span>
+    </div>
+    
+  </body>
+
+</html>

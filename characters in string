@@ -1,0 +1,4 @@
+function find_char(string1, string2){
+    sets = set(string2)
+    return ''.join((c for c in string1 if c in sets))
+}

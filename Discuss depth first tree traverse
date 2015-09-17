@@ -1,0 +1,33 @@
+In a depth first traversal, elements in the tree nodes are deeply traversed (i.e go deeper in a tree) before exploring siblings
+In any given tree, three operations must be performed at each node during traversal;
+	First is to visite the root node
+	Second is to traverse the left subtree
+	Third Is to traverse the right subtree.
+There are about six possible orders out of which three are generally useful. The traverse done to the left subtree is always used before the right.
+There are three orders;
+VLR: preorder (Visit precedes Left and Right)
+LVR: inorder (Visit between Left and Right)
+LRV: postorder Visit after Left and Right)
+
+For example, given the following tree:
+
+   	   a    
+     /   \
+    d      b
+  /   \      \
+ q     h      z
+  \
+   f
+
+… where a is the root
+A preorder traversal would visit the elements in the order: a, d, q, f, h, b, z
+PreorderTraverse(tree)
+If (tree not empty)
+    Visit root of tree
+     preorderTraverse(left subtree)
+     preorderTraverse(right subtree)
+ 
+The 2 other traversal orders we know are inorder and postorder. An inorder traversal would give us: q, f, d, h, a, b, z. A postorder traversal would give us: f, q, h, d, z, b, a.
+For example, the inorder traversal visits q and f before it explores q's sibling h. Likewise, it visits all of a's left subtree (i.e., "q, f, d, h") before exploring a's right subtree (i.e., "b, z"). The same is true for the postorder traversal. It visits all of a's left subtree (i.e., "f, q, h, d") before exploring any part of the right subtree (i.e., "z, b").
+
+

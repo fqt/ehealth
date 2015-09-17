@@ -1,0 +1,16 @@
+function unique(ary) {
+    // concat() with no args is a way to clone an array
+    var u = ary.concat().sort();
+    for (var i = 1; i < u.length; ) {
+        if (u[i-1] === u[i])
+            u.splice(i,1);
+        else
+            i++;
+    }
+    return u;
+}
+ 
+var ary = [1, 3, 7, 7, 8, 9, 9, 9, 10];
+var uniq = unique(ary);
+for (var i = 0; i < uniq.length; i++) 
+    print(uniq[i] + "\t" + typeof(uniq[i]));
